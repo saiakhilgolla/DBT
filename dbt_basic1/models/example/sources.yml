@@ -1,0 +1,16 @@
+#Defining the source dataset and tables in the sources.yml file allows us to use the Jinja function {{source(<name>, <table>)}}
+#Defining a source also allows us to define the lineage of our models, run tests on source data and find "freshness" of our data.
+
+version: 2
+
+sources:
+  - name: thelook_ecommerce
+    database: bigquery-public-data
+    tables:
+      - name: distribution_centers
+      - name: events
+      - name: inventory_items
+      - name: order_items
+      - name: orders
+      - name: products
+      - name: users
