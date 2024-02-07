@@ -108,3 +108,49 @@ Runtime Error
 [0m17:06:37.077021 [debug] [MainThread]: Command `dbt compile` failed at 17:06:37.076968 after 0.02 seconds
 [0m17:06:37.077199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075a5fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c10d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c11a20>]}
 [0m17:06:37.077375 [debug] [MainThread]: Flushing usage events
+[0m10:13:44.144997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104155fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065118a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106511030>]}
+
+
+============================== 10:13:44.148465 | 13fb08eb-46f6-4da8-9106-05582381762b ==============================
+[0m10:13:44.148465 [info ] [MainThread]: Running with dbt=1.6.9
+[0m10:13:44.148796 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '~/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:13:53.535843 [debug] [MainThread]: Starter project path: /Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/include/starter_project
+[0m10:13:53.546350 [info ] [MainThread]: 
+Your new dbt project "dbt_basic2" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:13:53.546836 [info ] [MainThread]: Setting up your profile.
+[0m10:14:47.497330 [error] [MainThread]: Encountered an error:
+[Errno 2] No such file or directory: '~/.dbt/profiles.yml'
+[0m10:14:47.499844 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/cli/main.py", line 484, in init
+    results = task.run()
+  File "/Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/task/init.py", line 308, in run
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/task/init.py", line 166, in create_profile_from_profile_template
+    self.write_profile(profile, profile_name)
+  File "/Users/saiakhilgolla/anaconda3/envs/dbt_bigquery/lib/python3.10/site-packages/dbt/task/init.py", line 156, in write_profile
+    with open(profiles_filepath, "w") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '~/.dbt/profiles.yml'
+
+[0m10:14:47.500493 [debug] [MainThread]: Command `dbt init` failed at 10:14:47.500401 after 63.37 seconds
+[0m10:14:47.500775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104155fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1194be5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1194bd660>]}
+[0m10:14:47.501067 [debug] [MainThread]: Flushing usage events

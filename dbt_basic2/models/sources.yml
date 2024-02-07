@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: thelook_ecommerce
+    description: This is the thelook_ecommerce public dataset on bigquery
+    database: bigquery-public-data
+    tables:
+      - name: orders
+        description: contains one row per order
+        columns:
+          - name: order_id
+            description: primary key for orders table
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            description: foreign key for orders table
+            tests:
+              - not_null
+          - name: status
+            description: order status
+            tests:
+              - accepted_values:
+                  values: ['Cancelled', 'Complete', 'Processing', 'Returned', 'Shipped']
+          - name: gender
+            description: gender of the user who placed the order
+            tests:
+              - accepted_values:
+                  values: ['M', 'F']
+
+      - name: users
+        description: users' info along with address, latitude, longitude and traffic source
+        columns:
+          - name: id
+            description: primary key for users table
+            tests:
+              - unique
+              - not_null
+          - name: age
+            description: age of the user
