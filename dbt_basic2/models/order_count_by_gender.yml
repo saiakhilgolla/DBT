@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: order_count_by_gender
+    tests:
+    #tests that are done using multiple columns can be defined at the model level.
+      - unique:
+          column_name: "country || '-' || state || '-' || gender "
+    columns:
+      - name: country
+        description: Name of country
+      - name: state
+        description: Name of a state in a country
+      - name: gender
+        description: gender of the user who made an order; either M or F
+        tests:
+          - accepted_values:
+             values: ['M', 'F']
+      - name: num_orders
+        description: Total number of orders made by males/ females in a country-state
