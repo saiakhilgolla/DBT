@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: olig_ecommerce
+    description: This is the Brazilian ecommerce public data set by Olist downloaded from Kaggle
+    database: optical-empire-412502
+    tables:
+      - name: orders
+      - name: order_items
+
+
+# will add more tests later on.

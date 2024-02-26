@@ -1,0 +1,24 @@
+
+version: 2
+
+models:
+  - name: stg_bigquery_orders
+    description: "model containing required fields from order table"
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "customer ID for the order"
+        tests:
+          - not null
+
+  - name: stg_bigquery_order_items
+    description: "model containing required fields from order_items table"
+    columns:
+      - name: order_id
+        description: "Foreign key for the table"
+        tests:
+          - not_null
