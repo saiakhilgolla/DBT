@@ -1,0 +1,13 @@
+dbt_intermediate1:
+  outputs:
+    dev:
+      dataset: olig_analysis
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: optical-empire-412502
+      threads: 60
+      type: bigquery
+  target: dev
