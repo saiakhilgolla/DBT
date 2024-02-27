@@ -11,7 +11,7 @@ with source_data as (
 		order_status,
 		DATE(order_purchase_timestamp) as order_purchase_date
 	FROM {{source('olig_ecommerce', 'orders')}}
-
+	WHERE order_purchase_timestamp >= '2017-01-01'
 )
 
 select *

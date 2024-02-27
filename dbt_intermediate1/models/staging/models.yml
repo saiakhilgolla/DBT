@@ -13,7 +13,7 @@ models:
       - name: customer_id
         description: "customer ID for the order"
         tests:
-          - not null
+          - not_null
 
   - name: stg_bigquery_order_items
     description: "model containing required fields from order_items table"

@@ -33,5 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_intermediate1:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    mart:
       +materialized: view
