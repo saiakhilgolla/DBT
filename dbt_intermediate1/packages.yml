@@ -1,0 +1,13 @@
+packages:
+# contains generic macros
+  - package: dbt-labs/dbt_utils
+    version: 1.0.0
+
+# an extension to dbt generic tests
+  - package: calogica/dbt_expectations
+    version: [">=0.8.0", "<0.9.0"]
+
+#This package can generate as well propoerties files for models but most interestingly it can generate property files for your sources.
+#It also has some convenient macros to generate base models from your source or to refactor your models into structured models with CTEs on top.
+  - package: dbt-labs/codegen
+    version: 0.9.0
