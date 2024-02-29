@@ -5,8 +5,40 @@ sources:
     description: This is the Brazilian ecommerce public data set by Olist downloaded from Kaggle
     database: optical-empire-412502
     tables:
+      - name: customers
       - name: orders
+        description: Table with each row corresponding to an order.
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+              - unique
+          - name: customer_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('olig_ecommerce', 'customers')
+                  field: customer_id
+
       - name: order_items
+        description: table with details of items ordered in each order and the purchase value. Each row corresponds to an item ordered in an order.
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('olig_ecommerce', 'orders')
+                  field: order_id
+
+          - name: freight_value
+            tests:
+              - not_null
+              - dbt_utils.expression_is_true:
+                  expression: freight_value > 0
+
+
+
+
 
 
 # will add more tests later on.
