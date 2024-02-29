@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: customer_rfm_metrics
+    description: "contains the rfm metrics for each customer in the timeframe from 2017 to latest date the data is available in 2018"
+    columns:
+      - name: customer_id
+        description: ""
+
+      - name: total_orders
+        description: "Total number of orders a customer has made in the specified time frame"
+
+      - name: avg_order_value
+        description: "Average order value of each customer in the specified time frame"
+
+      - name: days_since_last_purchase
+        description: "Number of days since the last purchase for each customer. This is calculated by taking the difference between max date the data is available for
+         and the last date the customer has made a purchase."
