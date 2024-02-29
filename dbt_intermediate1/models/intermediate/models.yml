@@ -6,13 +6,31 @@ models:
     columns:
       - name: customer_id
         description: ""
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: source('olig_ecommerce', 'customers')
+              field: customer_id
 
       - name: total_orders
         description: "Total number of orders a customer has made in the specified time frame"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: total_orders >=1
 
       - name: avg_order_value
         description: "Average order value of each customer in the specified time frame"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: avg_order_value > 0
 
       - name: days_since_last_purchase
         description: "Number of days since the last purchase for each customer. This is calculated by taking the difference between max date the data is available for
          and the last date the customer has made a purchase."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: days_since_last_purchase >=0
