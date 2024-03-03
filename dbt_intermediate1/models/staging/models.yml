@@ -24,6 +24,8 @@ models:
 
       - name: max_date
         description: "Last date for which data is available in the table"
+        tests:
+          - rows_are_identical
 
 
 
