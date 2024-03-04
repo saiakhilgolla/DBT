@@ -1,6 +1,6 @@
 {% test rows_are_identical(model, column_name) %}
 
-{{config (severity: 'error')}}
+{{config (severity = 'error')}}
 
 WITH validation AS (
 	SELECT

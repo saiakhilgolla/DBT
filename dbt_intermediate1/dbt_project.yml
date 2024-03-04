@@ -39,3 +39,7 @@ models:
       +materialized: view
     mart:
       +materialized: view
+
+tests:
+  dbt_intermediate1:
+    +severity: error
