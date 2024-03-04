@@ -1,5 +1,7 @@
 {% test rows_are_identical(model, column_name) %}
 
+{{config (severity: 'error')}}
+
 WITH validation AS (
 	SELECT
 		COUNT (DISTINCT {{column_name}}) as number_of_unique_values
