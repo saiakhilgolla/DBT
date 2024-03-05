@@ -1,10 +1,11 @@
-Welcome to your new dbt project!
+This is the most basic DBT project. This project focuses on the basic entities / files that you would see in a DBT project and create a simple model.
 
-### Using the starter project
+### What you can learn?
 
-Try running the following commands:
-- dbt run
-- dbt test
+- Creating a basic DBT project using DBT-core
+- Understand different files that are necessary to configure / run your project
+- Define source / target datasets for your project
+- Create a simple model and materialize it in Big Query database.
 
 
 ### Resources:
