@@ -1,6 +1,9 @@
 <p align="center"><img src="https://github.com/saiakhilgolla/DBT/blob/main/assests/DBT%20logo.jpg" width="300px"></p>
 
-This is the most basic DBT project. This project focuses on the basic entities / files that you would see in a DBT project and create a simple model.
+<h3>Project Overview</h3>
+<p align = "justify">This project focuses on understanding the basics of DBT. The scope of the project is limited to creating configuration files to set up the project and creating models using simple SQL queries. <p>
+
+<img src = "https://img.shields.io/badge/-red?style=for-the-badge" width="1500px" height="1px">
 
 ### What can you learn?
 
@@ -10,6 +13,7 @@ This is the most basic DBT project. This project focuses on the basic entities /
 - Define source / target datasets for your project
 - Create a simple model and materialize it in Big Query database.
 
+<img src = "https://img.shields.io/badge/-red?style=for-the-badge" width="1500px" height="1px">
 
 ### Setting up DBT for Big Query
 DBT can be installed into a virtual environment to isolate the DBT environment and prevent any conflicts later on.
@@ -26,6 +30,8 @@ DBT can be installed into a virtual environment to isolate the DBT environment a
 
     This installs all the google cloud commands such as `gcloud auth` in your command line or terminal.
 
+<img src = "https://img.shields.io/badge/-red?style=for-the-badge" width="1500px" height="1px">
+
 ### Creating a DBT project
 Before we create a project, it is a good practice to use version control so we can keep track of the code changes. This is also one of the advantages of using DBT.
 
@@ -36,6 +42,8 @@ To create a project from scratch:
 Once you run the dbt init command, it will start asking a series of questions that are required to set up the project. After you provide response to all the questions, it will create a profiles.yml file in ~/.dbt directory and a project folder with the name you specified in the git_repository you ran the command in.
 
 NOTE: By default running dbt init will create a profiles.yml file in ~/.dbt folder. In case you need to use different target datasets or want to set up different profiles for different projects you can create profiles.yml inside your project. But in this case you have to add `--profiles-dir .` at the end of all dbt commands.
+
+<img src = "https://img.shields.io/badge/-red?style=for-the-badge" width="1500px" height="1px">
 
 ### Creating Models
 The models folder contains 3 files.
@@ -48,6 +56,8 @@ To avoid having to use the exact paths when querying a table, I created a source
 <image>
 
 - The 'second_dbt_model.sql' tries to create another model with a simple SQL query, this time using the {{source()}} function to refer to the tables instead of using exact paths.
+
+<img src = "https://img.shields.io/badge/-red?style=for-the-badge" width="1500px" height="1px">
 
 ### Materializing models in a database
 
