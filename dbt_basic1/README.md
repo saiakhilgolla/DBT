@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/theidari/fraud_anomaly_detection/blob/main/assets/fad_header.png" width="300px"></p>
+<p align="center"><img src="https://github.com/saiakhilgolla/DBT/blob/main/assests/DBT%20logo.jpg" width="300px"></p>
 
 This is the most basic DBT project. This project focuses on the basic entities / files that you would see in a DBT project and create a simple model.
 
