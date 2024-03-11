@@ -46,16 +46,13 @@ NOTE: By default running dbt init will create a profiles.yml file in ~/.dbt fold
 <img src = "https://img.shields.io/badge/-red?style=for-the-badge" width="1500px" height="1px">
 
 ### Creating Models
-The models folder contains 3 files.
+<p align = "justify">Creating models in DBT is as simple as writing a SELECT statement to query a table. Although, we can build much more complicated models using DBT. <p>
 
-- The 'simple_dbt_model.sql' aims to create a simple model by just querying a few fields from a sample ecommerce dataset in Big Query.
+<p align = "justify">The 'simple_dbt_model.sql' creates a simple model by just querying a few fields from a sample ecommerce dataset in Big Query. <p>
 
-To avoid having to use the exact paths when querying a table, I created a sources.yml file to define my source database and tables. These defined tables can then be referred to using a Jinja function {{source()}}.
+<p align = "justify">To avoid having to use the exact paths when querying a table, I then created a *sources.yml* file where I can define my source database and tables. These defined tables can then be referred to using a Jinja function {{source(dataset, table)}}.<p>
 
-- A simple sources.yml file is a follows:
-<image>
-
-- The 'second_dbt_model.sql' tries to create another model with a simple SQL query, this time using the {{source()}} function to refer to the tables instead of using exact paths.
+<p align = "justify">The 'second_dbt_model.sql' creates another model with a simple SQL query, this time using the {{source(dataset, table)}} function to refer to the tables instead of using exact paths. <p>
 
 <img src = "https://img.shields.io/badge/-red?style=for-the-badge" width="1500px" height="1px">
 
